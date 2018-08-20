@@ -1,0 +1,122 @@
+@import "../../asset/style/common";
+//表格样式
+.gome-table-mod{
+  padding-top: 30px * $scale;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
+  min-height:1%;
+
+  box-sizing: border-box;
+  .table{
+    overflow-y: auto;
+    overflow-x: auto;
+    min-width: 100%;
+    background-color: #fff;
+    border-top:1px solid $table-border-color;/*no*/
+    tr{
+      &.rowHeader{
+        background: #F8F8F8;
+        td{
+          text-align: left;
+          border-top:1px solid $table-border-color;/*no*/
+          border-bottom: none;
+          span{line-height: 1}
+        }
+      }
+      th{
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-repeat: repeat-x;
+        text-align: center;
+        vertical-align: middle;
+        min-width: $table-column-min-width;
+        font-size: 16px;/*no*/
+        padding: 15px * $scale 0;
+        //IE8 hank
+        background-image: none\0;
+        background-color: #ebebeb\0;
+        &.idx {
+          min-width: 100px;
+        }
+        span{
+          display: inline-block;
+          color: #2a2a2a;
+          i{
+            display: inline-block;
+            color: red;
+            margin-right: 10px;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+      td{
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px * $scale 20px * $scale;
+        border-bottom: 1px solid $td-border-color;/*no*/
+        font-size: 14px;/*no*/
+        span{
+          display: inline-block;
+          font-size: 14px;/*no*/
+          color: #2a2a2a;
+          //line-height:16px;
+          white-space: nowrap;
+          //text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        /*初始化一系列样式(图片，warning，error，danger，normal，button)*/
+        .warning{
+          color: #ff731f;
+          font-weight: bold;
+        }
+        .price{
+          color: $font-default-color;
+        }
+        .danger{
+          color: red;
+        }
+        .normal{
+          color: #535353;
+        }
+        a{
+          text-decoration: none;
+          display: block;
+          padding: 3px 0;
+          color: #009cff;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+      &.shadow{
+        td{
+          background-color: #fdfcfc;
+        }
+      }
+    }
+  }
+  .table.table-bordered{
+    border-top:1px solid #bfbfbf; /*no*/
+    border-bottom:1px solid #bfbfbf;/*no*/
+    tr {
+      th{
+        border-left: 1px solid #bfbfbf;/*no*/
+        background-image: none;
+        border-bottom:1px solid #bfbfbf;/*no*/
+        background-color: $table-header-bg-color;
+        &:first-child{
+          border-left: none;
+        }
+      }
+      td{
+        border-left: 1px solid $table-border-color;/*no*/
+        &:first-child{
+          border-left: none;
+        }
+      }
+
+    }
+  }
+}

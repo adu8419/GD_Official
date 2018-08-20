@@ -1,0 +1,74 @@
+@import "../../asset/style/dominant.scss";
+.teamCarousel{
+  border: 1px solid blue;
+  width: 1050px;
+  height: 500px;
+  position: relative;
+  padding: 0 145px;
+  >.iconfont{
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+    font-size: 40px;
+    color: $arrow-fontColor;
+    transition: all .1s linear;
+    cursor: pointer;
+    &:hover{
+      color: $dominant-hue;
+      transition: all .1s linear;
+    }
+  }
+  >.icon-icon_arrow_left{
+    left: 10px;
+  }
+  >.icon-icon_arrow_right{
+    right: 10px;
+  }
+  >div{
+    &.contentArea{
+      width: 100%;
+      height: 100%;
+      border: 1px solid red;
+      overflow: hidden;
+      >ul{
+        width: 200%;
+        height: 100%;
+        @include flexLayout;
+        justify-content: flex-start;
+        align-items: flex-start;
+        >li{
+          height: 100%;
+          width: 50%;
+          background-color: green;
+          &:last-child{
+            background-color: purple;
+          }
+        }
+        &.towardLeft{
+          animation: towardLeftAnime 3s linear both;
+        }
+        &.towardRight{
+          animation: towardRightAnime 3s linear both;
+        }
+      }
+    }
+  }
+}
+
+@keyframes towardLeftAnime {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes towardRightAnime {
+  from{
+    transform: translateX(-50%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}

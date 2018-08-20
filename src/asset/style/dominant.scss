@@ -1,0 +1,97 @@
+$dominant-hue:#5464ae;//主色调
+$dominant-hueDeep:#546ead;
+$titleText-fontColor:#1f84a3;//标题颜色
+$header-navBgColor:#546eae;//导航条背景颜色
+$dominant-deepBgColor:#3d4f7b;
+$zone-bgColor:#f0f0f0;
+$zone-lineColor:#dfdfdf;
+$welcome-fontColor:#a5eaff;
+$body-bgColor:#fff;//body背景颜色
+$default-fontColor:#333;//默认字体颜色
+$arrow-fontColor:#bfbfbf;//左右箭头颜色
+$fade-fontColor:#666;
+$fadedeep-fontColor:#999;
+$teamCarousel-bgColor:#f5f5f5;
+$circleDefaultColor:#bfbfbf;
+$textAreaBgColor:rgba(0,0,0,0.45);
+$textFontColor:#fff;
+$line-borderColor:#e6e6e6;
+$goodsText-bgColor:$titleText-fontColor;
+
+$header-height:80px;
+
+$circleSize:12px;
+$textAreaHeight:50px;
+$textFontSize:14px;
+
+
+
+$login-bgColor:rgba(252,251,247,0.85);//登录盒子背景颜色
+$login-inputFontColor:#c2c2c1;//登录输入框字体颜色
+$login-inputSignColor:#f46178; //登录输入框获取焦点后的线框颜色
+$button-borderColor:$default-fontColor;//按钮边框颜色
+
+$nav-bgColor:#202731;//左边导航背景颜色
+
+$table-borderColor:#d8d8d8;//表格边框颜色
+$table-bgColor:#fff;//表格背景颜色
+$table-even-bgColor:#fdfcfc;//表格背景换色
+$table-fontColor:#626161;//表格字体颜色
+$table-fontSize:14px;//表格字体大小
+$thead-bgColor:#f8f8f8;//表头背景颜色
+$tr-hover-bgColor:#fee5e9;//每行移入背景颜色
+
+$pagination-fontColor:#5c5c5c;//分页字体颜色
+$font-number-fontColor: #272733;//数字颜色
+$button-borderColor:#999;
+$button-hover-bgColor:#fee5e9;
+
+$checkBox-selectColor:$dominant-hue;//复选框选中颜色
+$checkBox-borderColor:$default-fontColor;//复选框边框颜色
+$checkBox-lableColor:#666;//复选框字体颜色
+
+$btn-hue-hover-color:#ff667e;
+$dialog-shadow-bgColor:rgba(49,49,49,0.3);
+$dialog-border-color:#eee;
+$dialog-box-shadow-color:rgba(255,255,255,0.3);
+$dialog-header-bgColor:#fafafa;
+$dialog-header-title-fontColor:#272733;
+$dialog-line-color:#e8e8e8;
+$dialog-btn-border-color:#d9d9d9;
+$dialog-btn-fontColor:#rgba(0, 0, 0, 0.65);
+
+@mixin flexLayout{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin responsive($screen){//媒体查询
+  @if ($screen==screen1800){
+    @media screen and (min-width: 1800px){@content;}
+  }
+  @else if($screen==screen1650){
+    @media screen and (min-width:1650px) and (max-width:1799px){@content;}
+  }
+  @else if($screen==screen1500){
+    @media screen and (min-width:1500px) and (max-width:1650px){@content;}
+  }
+  @else if($screen==screen1350){
+    @media screen and (min-width:1350px) and (max-width:1499px){@content;}
+  }
+  @else if($screen==screen1250){
+    @media screen and (min-width:1250px) and (max-width:1349px){@content;}
+  }
+  @else if($screen==screen1100){
+    @media screen and (min-width:1100px) and (max-width:1249px){@content;}
+  }
+  @else if($screen==screen992){
+    @media screen and (min-width:992px) and (max-width:1099px){@content;}
+  }
+  @else if($screen==screen768){
+    @media screen and (min-width:768px) and (max-width:991px){@content;}
+  }
+  @else if($screen==screen767){
+    @media screen and (max-width:767px){@content;}
+  }
+}

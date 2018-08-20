@@ -1,0 +1,161 @@
+@import "../../../../asset/style/dominant";
+ul{
+  &.leftTabs{
+    width: 1050px;
+    margin: 22px auto 0;
+    padding-bottom: 22px;
+    @include flexLayout;
+    justify-content: flex-start;
+    align-items: flex-start;
+    >li{
+      &.aisde{
+        width: 260px;
+        margin-right: 20px;
+        >div{
+          &.welcomeArea{
+            height: 158px;
+            background-image: url("../../../../asset/images/zoneBg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin-bottom: 22px;
+            padding-top: 30px;
+            >p{
+              color: #fff;
+              font-size: 22px;
+              margin: 0 0 15px 0;
+            }
+            >span{
+              color: #fff;
+              font-size: 16px;
+            }
+          }
+        }
+        >ul{
+          height: 560px;
+          background-color: $header-navBgColor;
+          >li{
+            display: block;
+            height: 50px;
+            padding-left: 60px;
+            @include flexLayout;
+            justify-content: flex-start;
+            background-color: transparent;
+            transition: all .1s linear;
+            cursor: pointer;
+            >span{
+              color: #fff;
+              font-size: 16px;
+              margin-left: 10px;
+            }
+            &:hover,&.active{
+              background-color: $dominant-deepBgColor;
+              transition: all .1s linear;
+            }
+          }
+        }
+      }
+      &.section{
+        max-width: calc(1050px - 280px);
+        background-color: #fff;
+        flex-grow: 1;
+        min-height: 740px;
+
+        .form-box {
+          padding: 20px  40px;
+          .table {
+          border-top: 0;
+            a {
+              margin: 0 20px;
+              color:#000;
+              cursor: pointer;
+              display: inline-block;
+              color: blue;
+            }
+          }
+          .header-title {
+            border-bottom: 1px solid #dedede;
+            padding-bottom: 20px;
+            >span{
+              margin-left: 6px;
+            }
+          }
+          .form-content-box {
+            padding-top: 60px;
+            em {
+              color: red;
+              padding: 2px 6px;
+            }
+            img {
+              max-width: 120px;
+              max-height: 180px;
+            }
+
+            .filter-box {
+              &.filter-single-box {
+                display: block;
+                .filter-search {
+                  width: 200px;
+                  float: right;
+                }
+              }
+              text-align: right;
+              width: 100%;
+              padding: 30px 0;
+              padding-left: 60px;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .filter-search {
+                width: 200px;
+                position: relative;
+                >img {
+                  height: 34px;
+                  display: inline-block;
+                  position: absolute;
+                  cursor: pointer;
+                  right:2px;
+                  top: 0;
+                  &:hover {
+                    zoom: 1.1;
+                  }
+                }
+              }
+            }
+            .form-group {
+              overflow: hidden;
+              textarea {
+                resize: none;
+                min-height: 120px;
+              }
+              button{
+                width: 200px;
+              }
+              .radio-inline {
+                margin-left: 20px;
+              }
+            }
+            .file-upload-area {
+              min-width: 200px;
+              min-height:160px;
+              border: 1px solid #ccc;
+              padding:6px;
+              line-height: 150px;
+
+            }
+            .ueditor-box {
+              width: 600px;
+            }
+            .files-gallery {
+              >div {
+                margin-bottom: 10px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

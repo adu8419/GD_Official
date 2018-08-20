@@ -1,0 +1,323 @@
+@import "../../../../asset/style/dominant.scss";
+div{
+  &.headerArea{
+    height: $header-height;
+    width: 100%;
+    @include flexLayout;
+    justify-content: center;
+    box-sizing: border-box;
+    >div{
+      @include flexLayout;
+      justify-content: space-between;
+      @include responsive(screen1800){
+        width: 60%;
+      }
+      @include responsive(screen1650){
+        width: 65%;
+      }
+      @include responsive(screen1500){
+        width: 70%;
+      }
+      @include responsive(screen1350){
+        width: 75%;
+      }
+      @include responsive(screen1250){
+        width: 80%;
+      }
+      @include responsive(screen1100){
+        width: 80%;
+      }
+      @include responsive(screen992){
+        width: 80%;
+      }
+      @include responsive(screen768){
+        width: 80%;
+      }
+      @include responsive(screen767){
+        width: 80%;
+      }
+      >div{
+        &.horizontaSort{
+          position: relative;
+          @include responsive(screen1800){
+            display: none;
+          }
+          @include responsive(screen1650){
+            display: none;
+          }
+          @include responsive(screen1500){
+            display: none;
+          }
+          @include responsive(screen1350){
+            display: none;
+          }
+          @include responsive(screen1250){
+            display: none;
+          }
+          @include responsive(screen1100){
+            display: block;
+          }
+          @include responsive(screen992){
+            display: block;
+          }
+          @include responsive(screen768){
+            display: block;
+          }
+          @include responsive(screen767){
+            display: block;
+          }
+          >.iconfont{
+            font-size: 38px;
+            cursor: pointer;
+          }
+          >ul{
+            position: fixed;
+            background-color: #fff;
+            height: 305px;
+            top: 80px;
+            left: 0;
+            right: 0;
+            padding: 15px 0 0 15px;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+            z-index: 9999;
+            >li{
+              &:not(:last-child){
+                margin-bottom: 10px;
+              }
+              >a{
+                text-decoration: none;
+                @include flexLayout;
+                justify-content: flex-start;
+                >span{
+                  color: $dominant-hue;
+                  font-size: 18px;
+                  display: inline-block;
+                  padding-bottom: 5px;
+                }
+                >i{
+                  &.underline{
+                    border: 1px solid transparent;
+                    width: 100%;
+                    transition: all .1s linear;
+                  }
+                }
+                &.activeLink,&:hover{
+                  >span{
+                    color: $dominant-hueDeep;
+                    transition: all .1s linear;
+                  }
+                  >i{
+                    &.underline{
+                      border: 1px solid $dominant-hueDeep;
+                      transition: all .1s linear;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      >ul{
+        &.rankSort{
+          @include flexLayout;
+          justify-content: flex-start;
+          @include responsive(screen1100){
+            display: none;
+          }
+          @include responsive(screen992){
+            display: none;
+          }
+          @include responsive(screen768){
+            display: none;
+          }
+          @include responsive(screen767){
+            display: none;
+          }
+          >li{
+            position: relative;
+            &:not(:last-child){
+              margin-right: 50px;
+            }
+            >a{
+              text-decoration: none;
+              @include flexLayout;
+              justify-content: center;
+              >span{
+                font-size: 18px;
+                transition: all .1s linear;
+              }
+              >i{
+                &.underline{
+                  position: absolute;
+                  display: inline-block;
+                  border: 2px solid transparent;
+                  width: 100%;
+                  top:35px;
+                  transition: all .1s linear;
+                }
+              }
+              &.activeLink,&:hover{
+                >span{
+                  font-weight: bold;
+                  transition: all .1s linear;
+                }
+                >i{
+                  &.underline{
+                    transition: all .1s linear;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.headerFixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    >div{
+      >div{
+        &.horizontaSort{
+          >.iconfont{
+            color: $dominant-hue;
+          }
+        }
+      }
+      >ul{
+        &.rankSort{
+          >li{
+            >a{
+              >span{
+                color: $dominant-hue;
+              }
+              &.activeLink,&:hover{
+                >span{
+                  color: $dominant-hueDeep;
+                }
+                >i{
+                  &.underline{
+                    border: 2px solid $dominant-hueDeep;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.headerFixedNotTop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: $header-navBgColor;
+    >div{
+      >div{
+        &.horizontaSort{
+          >.iconfont{
+            color: #fff;
+          }
+        }
+      }
+      >ul{
+        &.rankSort{
+          >li{
+            >a{
+              >span{
+                color: #fff;
+              }
+              &.activeLink,&:hover{
+                >span{
+                  color: #fff;
+                }
+                >i{
+                  &.underline{
+                    border: 2px solid #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.headerAbsolute{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    >div{
+      >div{
+        &.horizontaSort{
+          >.iconfont{
+            color: $dominant-hue;
+          }
+        }
+      }
+      >ul{
+        &.rankSort{
+          >li{
+            >a{
+              >span{
+                color: $dominant-hue;
+              }
+              &.activeLink,&:hover{
+                >span{
+                  color: $dominant-hueDeep;
+                }
+                >i{
+                  &.underline{
+                    border: 2px solid $dominant-hueDeep;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.headerNotFixed{
+    position: relative;
+    background-color: $header-navBgColor;
+    >div{
+      >div{
+        &.horizontaSort{
+          >.iconfont{
+            color: #fff;
+          }
+        }
+      }
+      >ul{
+        &.rankSort{
+          >li{
+            >a{
+              >span{
+                color: #fff;
+              }
+              &.activeLink,&:hover{
+                >span{
+                  color: #fff;
+                }
+                >i{
+                  &.underline{
+                    border: 2px solid #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

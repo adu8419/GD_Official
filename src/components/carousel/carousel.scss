@@ -1,0 +1,106 @@
+@import "../../asset/style/dominant.scss";
+.carouselBox{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 41%;
+  box-sizing: border-box;
+  .imgBox{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    >div{
+      &.carousel{
+        width: 100%;
+        height: 100%;
+        >img{
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .circleArea{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    height: $textAreaHeight;
+    width: 100%;
+    padding:0 15px;
+    box-sizing: border-box;
+    i{
+      &.circle{
+        display: inline-block;
+        width:$circleSize;
+        height: $circleSize;
+        border-radius: 50%;
+        background-color: $circleDefaultColor;
+        border: 1px solid $circleDefaultColor;
+        transition: all .1s linear;
+        margin-right: 15px;
+        cursor: pointer;
+        &:hover{
+          border: 1px solid $dominant-hue;
+          transition: all .1s linear;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      &.active{
+        background-color: $dominant-hue;
+        border: 1px solid $dominant-hue;
+        transition: all .1s linear;
+      }
+    }
+  }
+  >.iconfont{
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+    font-size: 40px;
+    color: $arrow-fontColor;
+    transition: all .1s linear;
+    cursor: pointer;
+    &:hover{
+      color: $dominant-hue;
+      transition: all .1s linear;
+    }
+  }
+  >.icon-icon_arrow_left{
+    left: 30px;
+  }
+  >.icon-icon_arrow_right{
+    right: 30px;
+  }
+}
+
+
+.carousel-enter {
+  opacity: 0.01;
+}
+
+.carousel-enter.carousel-enter-active {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-leave {
+  opacity: 1;
+}
+
+.carousel-leave.carousel-leave-active {
+  opacity: 0.01;
+  transition: opacity 1.5s ease-in-out;
+}

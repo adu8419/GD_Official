@@ -1,0 +1,24 @@
+{
+    "result": {
+         "pageNum": 0,
+                "pageSize": 0,
+                "id": 1,
+                "chinaName": "李连杰",
+                "englishName": null,
+                "honor": null,
+                "rank": null,
+                "type": 0,
+                "headImage": "assets/",
+                "uploadTime": null,
+                "publishTime": null,
+                "achievement": null,
+                "introduce": null,
+                "userId": null,
+                "lastStatusTime": null
+    },
+    "isSuccess": true,
+    "errorType": null,
+    "errorCode": null,
+    "errorMsg": null,
+    "token": null
+}

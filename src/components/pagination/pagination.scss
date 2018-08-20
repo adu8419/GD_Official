@@ -1,0 +1,66 @@
+@import "../../asset/style/common";
+//分页样式
+.pagination-mod{
+  padding: 30px 20px;
+  height: 30px;
+  .operation{
+    padding: 0 0 6px 0;
+    b{padding: 0 10px}
+    span{
+      font-size:20px * $scale;
+      color: #5c5c5c;
+      label {
+        padding: 0 10px;
+      }
+      select{
+        vertical-align: middle;
+        position: relative;
+        top:-1px;
+      }
+    }
+  }
+  .oper-gopage {
+     margin-left: 30px;
+    span {
+      margin: 0 10px;
+    }
+    input {
+      width: 60px;
+    }
+  }
+  .page-wrapper{
+    .button{
+      color: #424242;
+      &:hover{
+        color: $font-default-color;
+        border-color: $font-default-color;
+      }
+    }
+    .button.min{
+      width: 30px;
+      min-width: 30px;
+      line-height: 26px;
+      text-align: center;
+      padding: 0;
+      margin: 0 2px;
+    }
+    .button.active{
+      background-color:#337ab7;
+      color:#fff;
+      border-color:#337ab7;
+    }
+    .button.disabled{
+      color: #dadada;
+      border-color: #e6e6e6;
+      background-color: #fff;
+    }
+    .prev{
+      margin-right: 10px;
+    }
+    .next{
+      margin-left: 10px;
+    }
+  }
+
+
+}

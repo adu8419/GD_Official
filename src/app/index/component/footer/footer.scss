@@ -1,0 +1,88 @@
+@import "../../../../asset/style/dominant.scss";
+$footer-width:100%;
+$footer-height:0.13 * $footer-width;
+@mixin markTitle{
+  color: #fff;
+  font-size: 24px;
+  line-height: 50px;
+}
+.footerArea{
+  text-align: center;
+  width: 100%;
+  min-height: $footer-height;
+  background-image: url("../../../../asset/images/footerBg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 30px 0 10px 0;
+  >ul{
+    width: 800px;
+    margin: 0 auto;
+    @include flexLayout;
+    justify-content: space-between;
+    align-items: flex-start;
+    >li{
+      @include flexLayout;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      &.logoMark{
+        >ul{
+          margin-top: 23px;
+          >li{
+            text-align: left;
+            &:not(:last-child){
+              margin-bottom: 5px;
+            }
+            >span,.iconfont{
+              color: #fff;
+              font-size: 14px;
+            }
+            &:last-child{
+              >span:first-child{
+              }
+            }
+          }
+        }
+      }
+      &.subsidiaryPdc{
+        >p{
+          @include markTitle;
+        }
+        >ul{
+          margin-top: 11px;
+          >li{
+            @include flexLayout;
+            width: 210px;
+            &:not(:last-child){
+              margin-bottom: 10px;
+              justify-content: space-between;
+              >div{
+                width: 100px;
+                text-align: left;
+              }
+            }
+            &:last-child{
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+      &.contact{
+        >p{
+          @include markTitle;
+        }
+      }
+    }
+  }
+  >p{
+    text-align: center;
+    margin-top: 30px;
+    >span{
+      font-size: 14px;
+      color: #fff;
+      &:first-child{
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 780055 */
+  src: url('//at.alicdn.com/t/font_780055_87lcww3jnvp.eot');
+  src: url('//at.alicdn.com/t/font_780055_87lcww3jnvp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_780055_87lcww3jnvp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_780055_87lcww3jnvp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_780055_87lcww3jnvp.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_arrow_left:before { content: "\e60c"; }
+
+.icon-icon_arrow_right:before { content: "\e60d"; }
+
+.icon-ego-caidan:before { content: "\e62f"; }
+
