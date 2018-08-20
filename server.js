@@ -8,13 +8,13 @@ new WebpackDevServer(webpack(config),{
 	disableHostCheck: true,
     proxy: {
         '/api': {
-            target: 'http://122.114.122.49:8080',//代理配置 公网http://122.114.122.49:8080
+            target: '',//代理配置
             secure: false,
             changeOrigin: true,
             // pathRewrite: {'^/manhour' : ''},
         },
         '/image': {
-            target: 'http://122.114.122.49:8080',//代理配置 公网http://122.114.122.49:8080
+            target: '',//
             secure: false,
             changeOrigin: true,
             // pathRewrite: {'^/manhour' : ''},
